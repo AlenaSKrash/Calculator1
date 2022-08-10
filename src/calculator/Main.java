@@ -1,10 +1,23 @@
 package calculator;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        Calculator c1 = new Calculator();
+        Scanner scanner = new Scanner(System.in);
 
-        System.out.println(c1.calculate());
+        while (true) {
+            Calculator c1 = new Calculator();
+
+            System.out.println(c1.calculate());
+
+            System.out.println("Play again? Y/n");
+            String playAgain = scanner.nextLine();
+
+            if (!playAgain.equals("Y")) {
+                break;
+            }
+
+        }
     }
-
 }
